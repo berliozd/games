@@ -13,6 +13,8 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/g/{slug}', [App\Http\Controllers\GameController::class, 'index'])->name('game');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
