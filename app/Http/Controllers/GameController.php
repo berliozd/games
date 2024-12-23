@@ -9,6 +9,6 @@ class GameController extends Controller
     public function index($slug)
     {
         $game = Games::where('slug', $slug)->first();
-        return View('Game', ['game' => $game]);
+        return View('game', ['game' => $game]);
     }
 }
