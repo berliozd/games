@@ -42,7 +42,7 @@ function handleImageError() {
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                     <div
-                        class="flex lg:justify-center lg:col-start-2 rounded-lg p-6 sm:shadow-none shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-black/10 bg-white  sm:ring-0">
+                        class="flex lg:justify-center lg:col-start-2 rounded-lg p-3 sm:shadow-none shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-black/10 bg-white  sm:ring-0">
                         <img src="/img/games-addeos-logo.png"
                              alt="Games addeos : Simple Games, Endless Fun – Play, Compete, Share!">
                     </div>
@@ -110,7 +110,7 @@ function handleImageError() {
                                     </h2>
                                     <div class="flex justify-between w-full">
                                         <p class="mt-4 text-sm/relaxed">
-                                            {{ game.description }}
+                                            {{ game.short_description }}
                                         </p>
                                         <a :href="'/g/'+game.slug">
                                             <svg class="size-6 shrink-0 stroke-[#FF2D20]"
