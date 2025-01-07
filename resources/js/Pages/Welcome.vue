@@ -72,6 +72,37 @@ function handleImageError() {
                             </div>
                         </div>
 
+                        <div class="rounded-lg p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 transition duration-300 ring-black/10 hover:ring-black/50
+                         md:row-span-3 lg:p-10 lg:pb-10 bg-white">
+                            <div class="relative flex items-center gap-6 lg:items-end">
+                                <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
+                                    <div class="pt-3 sm:pt-5 lg:pt-0 text-base">
+                                        <p class="font-bold">Why play on {{ page.props.appName }}?</p>
+                                        <ul class="list-decimal px-4 italic m-2">
+                                            <li><span class="font-extrabold">Diverse Challenges</span>: Improve your
+                                                skills while having fun.
+                                            </li>
+                                            <li><span class="font-extrabold">Share Your Scores</span>: Compete with
+                                                friends and share your achievements
+                                                on your favorite social media platforms.
+                                            </li>
+                                            <li><span class="font-extrabold">Free & No Installation Needed</span>: Play
+                                                directly from your browser,
+                                                wherever you are.
+                                            </li>
+
+                                            <li><span class="font-extrabold">Simplicity</span>: Easy-to-learn games,
+                                                ready to play with just one click.
+                                            </li>
+                                        </ul>
+                                        <p class="my-4">Ready to take on the challenge? Explore our selection and start
+                                            having fun today!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div v-for="game in games"
                              class="flex gap-4 rounded-lg shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-black/10 hover:ring-black/50 bg-white">
                             <a :href="'/g/'+game.slug" class="flex items-start w-full p-6 ">
@@ -127,37 +158,6 @@ function handleImageError() {
                                 </div>
 
                             </a>
-                        </div>
-
-                        <div class="rounded-lg p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 transition duration-300 ring-black/10 hover:ring-black/50
-                         md:row-span-3 lg:p-10 lg:pb-10 bg-white">
-                            <div class="relative flex items-center gap-6 lg:items-end">
-                                <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                    <div class="pt-3 sm:pt-5 lg:pt-0 text-base">
-                                        <p class="font-bold">Why play on {{ page.props.appName }}?</p>
-                                        <ul class="list-decimal px-4 italic m-2">
-                                            <li><span class="font-extrabold">Diverse Challenges</span>: Improve your
-                                                skills while having fun.
-                                            </li>
-                                            <li><span class="font-extrabold">Share Your Scores</span>: Compete with
-                                                friends and share your achievements
-                                                on your favorite social media platforms.
-                                            </li>
-                                            <li><span class="font-extrabold">Free & No Installation Needed</span>: Play
-                                                directly from your browser,
-                                                wherever you are.
-                                            </li>
-
-                                            <li><span class="font-extrabold">Simplicity</span>: Easy-to-learn games,
-                                                ready to play with just one click.
-                                            </li>
-                                        </ul>
-                                        <p class="my-4">Ready to take on the challenge? Explore our selection and start
-                                            having fun today!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
