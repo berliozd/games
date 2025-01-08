@@ -11,17 +11,24 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
     @vite(['resources/js/app.js'])
     <meta name="description" content="{{ $description }}">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLJ3N1YJN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    @if(app('env') === 'production')
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLJ3N1YJN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        gtag('config', 'G-RDLJ3N1YJN');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0882802698917065"
-            crossorigin="anonymous"></script>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-RDLJ3N1YJN');
+        </script>
+        <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0882802698917065"
+                crossorigin="anonymous"></script>
+    @endif
 </head>
 <body class="font-sans antialiased">
 <div class="navbar bg-base-100">
