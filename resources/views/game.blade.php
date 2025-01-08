@@ -15,10 +15,10 @@
         </style>
 
         <div class="share-buttons flex flex-col gap-2 md:flex-row justify-between">
-            <button id="share-facebook" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on Facebook</button>
-            <button id="share-whatsapp" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on WhatsApp</button>
-            <button id="share-telegram" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on Telegram</button>
             <button id="share-x" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on X</button>
+            <button id="share-telegram" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on Telegram</button>
+            <button id="share-whatsapp" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on WhatsApp</button>
+            <button id="share-facebook" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on Facebook</button>
         </div>
         <script>
             function shareScore(platform) {
@@ -48,10 +48,10 @@
                 window.open(shareLink, '_blank');
             }
 
-            document.getElementById('share-facebook').addEventListener('click', () => shareScore('facebook'));
-            document.getElementById('share-whatsapp').addEventListener('click', () => shareScore('whatsapp'));
-            document.getElementById('share-telegram').addEventListener('click', () => shareScore('telegram'));
             document.getElementById('share-x').addEventListener('click', () => shareScore('x'));
+            document.getElementById('share-telegram').addEventListener('click', () => shareScore('telegram'));
+            document.getElementById('share-whatsapp').addEventListener('click', () => shareScore('whatsapp'));
+            document.getElementById('share-facebook').addEventListener('click', () => shareScore('facebook'));
         </script>
 
         {{$game->description}}
