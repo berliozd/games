@@ -5,6 +5,9 @@
     <input type="hidden" id="hiddenScore" value="0">
 
     <div class="rounded-lg border p-8 flex flex-col sm:justify-center items-center w-3/4 mx-auto m-4 text-xl">
+{{--        {!! $game->html !!}--}}
+{{--        <style>{!! $game->css !!}</style>--}}
+{{--        <script>{!! $game->js !!}</script>--}}
         {!! $game->content !!}
     </div>
     <div class="w-3/4 mx-auto text-xl">
