@@ -29,6 +29,9 @@
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0882802698917065"
                 crossorigin="anonymous"></script>
     @endif
+
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
 </head>
 <body class="font-sans antialiased">
 <div class="navbar bg-base-100">
