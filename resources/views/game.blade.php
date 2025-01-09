@@ -78,7 +78,7 @@
             document.getElementById('share-facebook').addEventListener('click', () => shareScore('facebook'));
         </script>
 
-        {{$game->description}}
+        {!! $game->description !!}
     </div>
 
     <div class="w-3/4 mx-auto mb-20 mt-8">
