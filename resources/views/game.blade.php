@@ -16,14 +16,18 @@
             .share-buttons {
                 display: none; /* Hidden by default */
             }
+
             code[class*=language-], pre[class*=language-] {
                 font-size: small;
             }
         </style>
 
         <div class="share-buttons flex flex-col gap-2 md:flex-row justify-between">
-            <button id="share-x" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">Share on
-                X
+            <button id="share-x" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">
+                Share on X
+            </button>
+            <button id="share-reddit" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">
+                Share on reddit
             </button>
             <button id="share-telegram" class="flex rounded bg-gray-600 p-4 cursor-pointer justify-center text-white">
                 Share on Telegram
@@ -43,20 +47,24 @@
                 let shareLink = '';
                 switch (platform) {
                     case 'facebook':
+                        shareLink = `https://www.facebook.com/sharer/sharer.php?href=${encodeURIComponent(url)}&quote=${encodeURIComponent(
+                            text)}`;
                     case 'telegram':
-                        shareLink = platform === 'facebook'
-                            ? `https://www.facebook.com/sharer/sharer.php?href=${encodeURIComponent(url)}&quote=${encodeURIComponent(
-                                text)}`
-                            : `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+                        shareLink = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(
+                            text)}`;
                         break;
                     case 'whatsapp':
                         shareLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
                         break;
                     case 'x':
-                        // Share URL for X (formerly Twitter)
                         shareLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
                         break;
+                    case 'reddit':
+                        shareLink = `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(
+                            text)}`
+                        break;
                     default:
+                        shareLink = '';
                         return;
                 }
 
@@ -64,6 +72,7 @@
             }
 
             document.getElementById('share-x').addEventListener('click', () => shareScore('x'));
+            document.getElementById('share-reddit').addEventListener('click', () => shareScore('reddit'));
             document.getElementById('share-telegram').addEventListener('click', () => shareScore('telegram'));
             document.getElementById('share-whatsapp').addEventListener('click', () => shareScore('whatsapp'));
             document.getElementById('share-facebook').addEventListener('click', () => shareScore('facebook'));
