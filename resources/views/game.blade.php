@@ -2,6 +2,20 @@
     <x-slot:title>{{$game->name}}</x-slot>
     <x-slot:description>{{$game->description}}</x-slot>
 
+    <div class="bg-red-200 w-3/4 mx-auto">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0882802698917065"
+                crossorigin="anonymous"></script>
+        <!-- Games game page -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-0882802698917065"
+             data-ad-slot="1315227924"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
     <input type="hidden" id="hiddenScore" value="0">
 
     <div class="rounded-lg border p-8 flex flex-col sm:justify-center items-center w-3/4 mx-auto m-4 text-xl">
