@@ -11,7 +11,9 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
     @vite(['resources/js/app.js'])
     <meta name="description" content="{{ $description }}">
-    @if(app('env') === 'production')
+    <link rel="canonical" href="{{ $url }}">
+
+@if(app('env') === 'production')
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLJ3N1YJN"></script>
         <script>

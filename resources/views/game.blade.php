@@ -1,9 +1,11 @@
 <x-layout.app>
     <x-slot:title>{{$game->name}}</x-slot>
-    <x-slot:description>{{$game->description}}</x-slot>
+    <x-slot:description>{{$game->short_description}}</x-slot>
+    <x-slot:url>{{getenv('APP_URL'). '/g/' .$game->slug}}</x-slot:url>
 
     <div class="bg-red-200 w-3/4 mx-auto">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0882802698917065"
+        <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0882802698917065"
                 crossorigin="anonymous"></script>
         <!-- Games game page -->
         <ins class="adsbygoogle"
