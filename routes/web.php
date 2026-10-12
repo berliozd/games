@@ -15,6 +15,14 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/sitemap.xml', function () {
+    $games = DB::table('games')->select('slug', 'updated_at')->orderBy('id')->get();
+
+    return response()
+        ->view('sitemap', ['games' => $games])
+        ->header('Content-Type', 'application/xml');
+});
+
 Route::get('/g/{slug}', [App\Http\Controllers\GameController::class, 'index'])->name('game');
 
 Route::middleware([
