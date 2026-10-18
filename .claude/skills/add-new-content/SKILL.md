@@ -1,5 +1,5 @@
 ---
-name: add-new-game
+name: add-new-content
 description: Create a new SEO-friendly browser game page for games.addeos.com, on a seasonal or trending theme. Use when the user asks for a new game, a new game page, or a new SEO page/guide on the games site.
 ---
 
